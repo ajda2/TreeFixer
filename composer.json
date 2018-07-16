@@ -1,0 +1,16 @@
+{
+    "name": "ajda2/tree-fixer",
+    "description": "Tool for broken tree structure repair",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Michal Tichy",
+            "email": "michal@tichy-vyvojar.cz"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.2",
+        "phpunit/dbunit": "^4.0"
+    }
+}
