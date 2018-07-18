@@ -1,29 +1,14 @@
 <?xml version="1.0" ?>
 <dataset>
-	<table name="tree">
-		<column>id</column>
-		<column>name</column>
-		<column>left</column>
-		<column>right</column>
-		<column>parent_id</column>
-		<column>depth</column>
-
-		<row>
-			<value>1</value>
-			<value>root</value>
-			<value>0</value>
-			<value>0</value>
-			<value>0</value>
-			<value>0</value>
-		</row>
-
-		<row>
-			<value>2</value>
-			<value>Procesory</value>
-			<value>0</value>
-			<value>0</value>
-			<value>0</value>
-			<value>0</value>
-		</row>
-	</table>
+	<tree id="1" name="root" left="0" right="0" parent_id="0" depth="0" />
+	<tree id="2" name="Procesory" left="0" right="0" parent_id="1" depth="1" />
+	<tree id="3" name="Intel" left="0" right="0" parent_id="2" depth="2" />
+	<tree id="4" name="AMD" left="0" right="0" parent_id="2" depth="2" />
+	<tree id="5" name="Pentium" left="0" right="0" parent_id="3" depth="3" />
+	<tree id="6" name="Celeron" left="0" right="0" parent_id="3" depth="3" />
+	<tree id="7" name="Duron" left="0" right="0" parent_id="4" depth="3" />
+	<tree id="8" name="Athlon" left="0" right="0" parent_id="4" depth="3" />
+	<tree id="9" name="Paměti" left="0" right="0" parent_id="1" depth="1" />
+	<tree id="10" name="DDR" left="0" right="0" parent_id="9" depth="2" />
+	<tree id="11" name="DIMM" left="0" right="0" parent_id="9" depth="2" />
 </dataset>

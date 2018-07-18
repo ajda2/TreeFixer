@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<dataset>
+	<tree id="1" name="root" left="1" right="22" parent_id="0" depth="0" />
+	<tree id="2" name="Procesory" left="2" right="15" parent_id="1" depth="1" />
+	<tree id="3" name="Intel" left="3" right="8" parent_id="2" depth="2" />
+	<tree id="4" name="AMD" left="9" right="14" parent_id="2" depth="2" />
+	<tree id="5" name="Pentium" left="4" right="5" parent_id="3" depth="3" />
+	<tree id="6" name="Celeron" left="6" right="7" parent_id="3" depth="3" />
+	<tree id="7" name="Duron" left="10" right="11" parent_id="4" depth="3" />
+	<tree id="8" name="Athlon" left="12" right="13" parent_id="4" depth="3" />
+	<tree id="9" name="Paměti" left="16" right="21" parent_id="1" depth="1" />
+	<tree id="10" name="DDR" left="17" right="18" parent_id="9" depth="2" />
+	<tree id="11" name="DIMM" left="19" right="20" parent_id="9" depth="2" />
+</dataset>
