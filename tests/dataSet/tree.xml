@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<dataset>
+	<table name="tree">
+		<column>id</column>
+		<column>name</column>
+		<column>left</column>
+		<column>right</column>
+		<column>parent_id</column>
+		<column>depth</column>
+
+		<row>
+			<value>1</value>
+			<value>root</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+		</row>
+
+		<row>
+			<value>2</value>
+			<value>Procesory</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+			<value>0</value>
+		</row>
+	</table>
+</dataset>
