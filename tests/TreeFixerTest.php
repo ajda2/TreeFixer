@@ -3,18 +3,34 @@
 namespace Tests;
 
 require_once "./DbTestCase.php";
+require_once __DIR__ . "/../src/TreeFixer.php";
 
 use PHPUnit\DbUnit\DataSet\IDataSet;
 use TreeFixer;
 
-use PHPUnit\DbUnit\TestCaseTrait;
-
 class TreeFixerTest extends DbTestCase {
 
-	use TestCaseTrait;
+	/** @var TreeFixer */
+	private $treeFixer;
 
-	public function test__construct() {
+	public function setUp(): void {
+		parent::setUp();
 
+		$this->treeFixer = new TreeFixer($this->getConnection()->getConnection());
+	}
+
+	public function test_fixTree() {
+		$rootCategoryId = 1;
+		$step = 0;
+		$this->treeFixer->fixTree($rootCategoryId, $step);
+
+		$queryTable = $this->getConnection()->createQueryTable(
+			'tree',
+			'SELECT * FROM `tree` ORDER BY `id` ASC'
+		);
+		$expectedTable = $this->createFlatXmlDataSet(__DIR__ . '/dataSet/treeFixed.xml')
+			->getTable("tree");
+		$this->assertTablesEqual($expectedTable, $queryTable);
 	}
 
 	/**
@@ -23,6 +39,6 @@ class TreeFixerTest extends DbTestCase {
 	 * @return IDataSet
 	 */
 	protected function getDataSet() {
-		return $this->createXMLDataSet(__DIR__.'/dataSet/tree.xml');
+		return $this->createFlatXMLDataSet(__DIR__ . '/dataSet/tree.xml');
 	}
 }
