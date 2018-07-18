@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <dataset>
 	<tree id="1" name="root" left="0" right="0" parent_id="0" depth="0" />
 	<tree id="2" name="Procesory" left="0" right="0" parent_id="1" depth="1" />

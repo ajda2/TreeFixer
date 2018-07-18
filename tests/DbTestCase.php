@@ -26,7 +26,14 @@ abstract class DbTestCase extends TestCase {
 	final public function getConnection() {
 		if ($this->conn === NULL) {
 			if (self::$pdo == NULL) {
-				self::$pdo = new PDO($GLOBALS['DB_DSN'], $GLOBALS['DB_USER'], $GLOBALS['DB_PASSWD']);
+				$options = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"];
+
+				self::$pdo = new PDO(
+					$GLOBALS['DB_DSN'],
+					$GLOBALS['DB_USER'],
+					$GLOBALS['DB_PASSWD'],
+					$options
+				);
 			}
 			$this->conn = $this->createDefaultDBConnection(self::$pdo, $GLOBALS['DB_DBNAME']);
 		}
