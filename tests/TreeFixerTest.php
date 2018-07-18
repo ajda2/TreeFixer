@@ -16,10 +16,6 @@ class TreeFixerTest extends DbTestCase {
 	public function test__construct() {
 
 	}
-//
-//	public function testFixTree() {
-//
-//	}
 
 	/**
 	 * Returns the test dataset.
